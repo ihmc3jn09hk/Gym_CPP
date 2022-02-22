@@ -1,4 +1,4 @@
-# LP_Plugin_SoftActorCritic
+# Gym_CPP
 
 The Gym implemented CartPole for 1D and 2D continuous.
 

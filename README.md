@@ -26,7 +26,7 @@ The states input show from the top-view (128x128) composes 4 channels, 2 for cur
 
 A frame consist of 1 color (grey) channel and 1 depth channel all in range `[0, 255]`.
 
-The following example is up scaled for illustration.
+The following example shows only the color (grey) channel of the current frame and up scaled for illustration.
 
 
 ![State/Features seen by the AI](features_in.gif)

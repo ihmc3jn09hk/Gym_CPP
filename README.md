@@ -22,11 +22,11 @@ Example
 
 ![Demo](global.gif)
 
-The states input show from the top-view (128x128). 
+The states input show from the top-view (128x128) composes 4 channels, 2 for current frame and 2 for previous frame.
 
-The color (Depth as alpha not shown here) input only.
+A frame consist of 1 color (grey) channel and 1 depth channel all in range `[0, 255]`.
 
-The following scaled to 512x512 for illustration.
+The following example is up scaled for illustration.
 
 
 ![State/Features seen by the AI](features_in.gif)

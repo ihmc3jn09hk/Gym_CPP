@@ -22,7 +22,7 @@ Example (Trained with Soft Actor-Critic)
 ![Demo](global.gif) 
 
 
-The states input show from the top-view (128x128) composes 4 channels, 2 for current frame and 2 for previous frame.
+A `state` is an top-view image of the CartPole (128x128) which composes 4 channels, 2 for current frame and 2 for previous frame.
 
 A frame consist of 1 ambient channel (Blue) and 1 depth channel (Green) all in range `[0, 255]`. 
 

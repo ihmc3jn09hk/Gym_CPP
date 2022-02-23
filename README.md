@@ -17,8 +17,7 @@ The example shown below uses vision-based version of 2D continuous CartPole.
 The CartPole VisionContinuous does not limit the cart position and linear velocity. So the cart is moving in an infinite plane or sphere (centripedal force neglected) as shown by the example. The `state` of the cart is transferred to an image for RL models.
 The vision-based version cannot be used directly. A callback renderer function is needed which maybe provided in the future.
 
-Example
-
+Example (Trained with Soft Actor-Critic)
 
 ![Demo](global.gif) 
 

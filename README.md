@@ -24,7 +24,7 @@ Example (Trained with Soft Actor-Critic)
 
 The states input show from the top-view (128x128) composes 4 channels, 2 for current frame and 2 for previous frame.
 
-A frame consist of 1 existence channel (Blue) and 1 depth channel (Green) all in range `[0, 255]`. 
+A frame consist of 1 ambient channel (Blue) and 1 depth channel (Green) all in range `[0, 255]`. 
 
 The following example shows the `state`'s and up scaled for illustration.
 

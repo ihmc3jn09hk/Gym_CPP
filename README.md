@@ -26,7 +26,7 @@ The states input show from the top-view (128x128) composes 4 channels, 2 for cur
 
 A frame consist of 1 ambient channel (Blue) and 1 depth channel (Green) all in range `[0, 255]`. 
 
-The following example shows the `state`'s and up scaled for illustration.
+The following example shows ONLY the current-frame (1st & 2nd channels of the current `state`) and up scaled for illustration.
 
 ![Demo_](godview.gif) ![State/Features seen by the AI](feature_in.gif)
 

@@ -15,7 +15,9 @@ The Gym implemented CartPole for 1D and 2D continuous.
 The example shown below uses vision-based version of 2D continuous CartPole.
 
 The CartPole VisionContinuous does not limit the cart position and linear velocity. So the cart is moving in an infinite plane or sphere (centripedal force neglected) as shown by the example. The `state` of the cart is transferred to an image for RL models.
-The vision-based version cannot be used directly. A callback renderer function is needed which maybe provided in the future.
+The vision-based version cannot be used directly. A callback renderer function is needed which can be found in `gym_gl.cpp`.
+The renderer depends on `glfw` and `glad` libraries which are also include in this repository.
+Example usage see below.
 
 Example (Trained with Soft Actor-Critic)
 
@@ -31,5 +33,49 @@ The following example shows ONLY the current-frame (1st & 2nd channels of the cu
 ![Demo_](godview.gif) ![State/Features seen by the AI](feature_in.gif)
 
 
+Example usage of the renderer
 
+```c++
+  ...
+  
+  Gym_Renderer_CartPoleContinuous renderer(128, 128);
+    gen_buffer_objects(shader_program);
+	
+	CartPole_ContinousVision gym;
+	
+	std::function<std::pair<int,int> (std::vector<double>,
+                                                std::vector<double>,
+                                                std::vector<unsigned int>&)> cb = 
+	[&renderer](std::vector<double> pos, std::vector<double> ang, std::vector<unsigned int>& data)
+	{
+		return renderer.render_state(pos, ang, data);
+	};
+	
+	gym.setRender_Callback(&cb);
+	
+  while (!glfwWindowShouldClose(window))
+  {
+		auto state = gym.reset();
+		auto frame = 0;
+		while (++frame) {
+			auto action = gym.sample_action();
+
+			auto &&rc = gym.step(action);
+			auto next_state = std::get<0>(rc);
+			auto reward = std::get<1>(rc);
+			auto done = std::get<2>(rc);
+			
+			if ( done.item().toInt()){
+				std::cout << "Done in : " << frame << std::endl;
+				break;
+			}
+			/* display and process events through callbacks */
+
+			std::this_thread::sleep_for(32ms);
+		}
+		//update_view_camera();
+  }
+    
+  ...
+```
 

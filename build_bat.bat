@@ -1,0 +1,1 @@
+cl /EHsc /std:c++17 /I . /I ..\glfw-3.3.6\install\include /I ..\..\libtorch\include\torch\csrc\api\include /I ..\..\libtorch\include glad_gl.c gym_gl.cpp gym_torch.cpp /DYNAMICBASE ..\glfw-3.3.6\install\lib\glfw3dll.lib /DYNAMICBASE ..\..\libtorch\lib\c10.lib /DYNAMICBASE ..\..\libtorch\lib\torch.lib /DYNAMICBASE ..\..\libtorch\lib\torch_cpu.lib /link /out:build\gym.exe

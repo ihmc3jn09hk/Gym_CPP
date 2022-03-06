@@ -29,6 +29,8 @@ Example : `Accumulated Rewards = 500` (Trained with Proximal Policy Optimization
 
 ![Demo2](image_ppo.gif)
 
+![Demo2](PPO_stat.svg)
+
 ** _The recording FPS is 30+ Hz, so the GIFs are not exactly with 500 frames._
 
 A `state` is an top-view image of the CartPole (128x128) which composes 4 channels, 2 for current frame and 2 for previous frame.

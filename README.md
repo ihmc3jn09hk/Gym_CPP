@@ -21,11 +21,11 @@ The vision-based version cannot be used directly. A callback renderer function i
 The renderer depends on `glfw` and `glad` libraries which are also include in this repository.
 Example usage see below.
 
-Example : `Accumulated Rewards = 500+` (Trained with Soft Actor-Critic)
+Following Example : `Accumulated Rewards = 500+` (Trained with Soft Actor-Critic) `ang_thres = 45 deg`
 
 ![Demo](global.gif) 
 
-Example : `Accumulated Rewards = 500+` (Trained with Proximal Policy Optimization V2)
+Following Example : `Accumulated Rewards = 500+` (Trained with Proximal Policy Optimization V2) `ang_thres = 30 deg`
 
 ![Demo2](image_ppo.gif)
 

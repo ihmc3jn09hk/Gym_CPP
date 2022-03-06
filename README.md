@@ -21,10 +21,15 @@ The vision-based version cannot be used directly. A callback renderer function i
 The renderer depends on `glfw` and `glad` libraries which are also include in this repository.
 Example usage see below.
 
-Example (Trained with Soft Actor-Critic)
+Example : `Accumulated Rewards = 500` (Trained with Soft Actor-Critic)
 
 ![Demo](global.gif) 
 
+Example : `Accumulated Rewards = 500` (Trained with Proximal Policy Optimization V2)
+
+![Demo2](image_ppo.gif)
+
+** _The recording FPS is 30+ Hz, so the GIFs are not exactly with 500 frames._
 
 A `state` is an top-view image of the CartPole (128x128) which composes 4 channels, 2 for current frame and 2 for previous frame.
 
